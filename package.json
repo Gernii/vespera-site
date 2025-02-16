@@ -26,7 +26,8 @@
 		"lint.check.biome": "biome check ./src",
 		"commit": "czg",
 		"changeset.add": "changeset add",
-		"prepare": "husky"
+		"prepare": "husky",
+		"postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/libs/i18n/messages"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
@@ -34,6 +35,7 @@
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@iconify-json/lucide": "^1.2.26",
+		"@inlang/paraglide-js": "^1.11.8",
 		"@sveltejs/adapter-cloudflare": "^5.0.1",
 		"@sveltejs/kit": "^2.16.0",
 		"@sveltejs/vite-plugin-svelte": "^5.0.0",
