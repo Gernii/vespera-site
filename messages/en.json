@@ -1,4 +1,10 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"tiny_polite_pigeon_learn": "Vespera"
+	"tiny_polite_pigeon_learn": "Vespera",
+	"known_bad_tadpole_relish": "example",
+	"only_wild_wombat_jump": "save {name}",
+	"misty_early_swan_enjoy": "submit your {name}",
+	"quiet_polite_yak_delight": "{name} name",
+	"spicy_noble_boar_boost": "playgroud",
+	"jolly_silly_chipmunk_view": "playground"
 }
