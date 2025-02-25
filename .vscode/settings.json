@@ -1,7 +1,7 @@
 {
 	"css.lint.unknownAtRules": "ignore",
-	"eslint.validate": ["svelte"],
-	"prettier.documentSelectors": ["**/*.svelte"],
+	"eslint.validate": ["vue"],
+	"prettier.documentSelectors": ["**/*.vue"],
 	"editor.codeActionsOnSave": {
 		"source.fixAll": "explicit",
 		"quickfix.biome": "explicit",
@@ -10,13 +10,13 @@
 	"[typescript]": {
 		"editor.defaultFormatter": "biomejs.biome"
 	},
-	"[svelte]": {
+	"[vue]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"editor.formatOnSave": true,
 	"tailwindCSS.experimental.classRegex": [
 		["cva(([^)]*))", "[\"'`]([^\"'`]*).*?[\"'`]"],
 		["cx(([^)]*))", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-		["clsx(([^)]*))", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+		["cn(([^)]*))", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
 	]
 }
