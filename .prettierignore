@@ -3,4 +3,14 @@ package-lock.json
 pnpm-lock.yaml
 yarn.lock
 
+
+**.*js*
+**.*ts*
+!**.config.*s*
+
+.nuxt/**
+**/*.config.ts
+**/*.d.ts
+**/*.json
 **/*.ts
+**/*.vue
