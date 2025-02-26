@@ -7,3 +7,10 @@ yarn.lock
 **.*js*
 **.*ts*
 !**.config.*s*
+
+.nuxt/**
+**/*.config.ts
+**/*.d.ts
+**/*.json
+**/*.ts
+**/*.vue

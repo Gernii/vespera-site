@@ -15,19 +15,19 @@
     "type-check": "vue-tsc --build --force",
     "---------FMT FIX-----------": "Fmt check and fix vaid code",
     "fmt.fix": "run-s \"fmt.fix.*\"",
-    "fmt.fix.prettier": "prettier --write \"src/**/*.vue\"",
-    "fmt.fix.biome": "biome format --write ./src",
+    "fmt.fix.prettier": "prettier --write \"**/*.vue\"",
+    "fmt.fix.biome": "biome format --write ./",
     "---------FMT CHECK-----------": "Fmt check vaid code only",
     "fmt.check": "run-s \"fmt.check.*\"",
-    "fmt.check.biome": "biome format ./src",
+    "fmt.check.biome": "biome format ./",
     "---------LINT FIX-----------": "Lint check and fix vaid code",
     "lint.fix": "run-s \"lint.fix.*\"",
-    "lint.fix.eslint": "eslint \"src/**/*.vue\" --fix",
-    "lint.fix.biome": "biome check --write --unsafe ./src",
+    "lint.fix.eslint": "eslint \"**/*.vue\" --fix",
+    "lint.fix.biome": "biome check --write --unsafe ./",
     "---------LINT CHECK-----------": "Lint check vaid code only",
     "lint.check": "run-s \"lint.check.*\"",
-    "lint.check.eslint": "eslint  \"src/**/*.vue\"  --max-warnings=0",
-    "lint.check.biome": "biome check ./src"
+    "lint.check.eslint": "eslint  \"**/*.vue\"  --max-warnings=0",
+    "lint.check.biome": "biome check ./"
   },
   "dependencies": {
     "@nuxt/eslint": "1.1.0",
@@ -63,13 +63,13 @@
     ]
   },
   "lint-staged": {
-    "src/**/*.vue": [
+    "**/*.vue": [
       "eslint --fix",
       "eslint --max-warnings=0",
       "prettier --write",
       "prettier --check"
     ],
-    "src/**/*.ts": [
+    "**/*.ts": [
       "biome format --write --no-errors-on-unmatched",
       "biome check --write --unsafe --no-errors-on-unmatched"
     ]

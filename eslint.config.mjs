@@ -5,7 +5,7 @@ import unusedImports from 'eslint-plugin-unused-imports'
 export default withNuxt(
 	// Your custom configs here
 	{
-		ignores: ['**/*.ts']
+		ignores: ['**/*.ts', "**/.nuxt/**", "**/*.config.ts", "**/*.d.ts", "*/*.json"]
 	},
 	{
 		plugins: {
