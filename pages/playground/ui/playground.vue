@@ -8,10 +8,18 @@ import Editor from './editor.vue'
 import OutputResult from './output-result.vue'
 import OutputAst from './output-ast.vue'
 import OutputTablist from './output-tablist.vue'
+import { usePageSeo } from '~/shared/lib/utils/hooks/page-seo/page-seo'
+import { ldJson } from '../configs/ld-json'
 
 const playgroundName = ref<string>('Hello world')
 
 const activeOutput = ref(OutputType.Result)
+
+usePageSeo({
+	title: `${playgroundName.value} - Playground`, // Sets the page title for SEO, combining the playground name and 'Playground'.
+	description: 'Interactive Vespera playground.', // Sets the page description for SEO.
+	ldJsons: [ldJson()] // Includes structured data in JSON-LD format for SEO.
+})
 </script>
 
 <template>
