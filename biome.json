@@ -12,7 +12,8 @@
 		"rules": {
 			"all": true,
 			"correctness": {
-				"useImportExtensions": "off"
+				"useImportExtensions": "off",
+				"noUndeclaredVariables": "off"
 			},
 			"style": {
 				"noNamespaceImport": "off"

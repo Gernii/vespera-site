@@ -22,7 +22,7 @@ Some resources possess an emoticon to help you understand which type of content 
 
 ### Meta tag
 
-- [ ] **Doctype:** :red_circle: The Doctype is HTML5 and is at the top of all your HTML pages.
+- [x] **Doctype:** :red_circle: The Doctype is HTML5 and is at the top of all your HTML pages.
 
 ```html
 <!doctype html>
@@ -33,21 +33,21 @@ Some resources possess an emoticon to help you understand which type of content 
 
 _The next 2 meta tags (Charset and Viewport) need to come first in the head._
 
-- [ ] **Charset:** :red_circle: The charset (UTF-8) is declared correctly.
+- [x] **Charset:** :red_circle: The charset (UTF-8) is declared correctly.
 
 ```html
 <!-- Set character encoding for the document -->
 <meta charset="utf-8" />
 ```
 
-- [ ] **Viewport:** :red_circle: The viewport is declared correctly.
+- [x] **Viewport:** :red_circle: The viewport is declared correctly.
 
 ```html
 <!-- Viewport for responsive web design -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 ```
 
-- [ ] **Title:** :red_circle: A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
+- [x] **Title:** :red_circle: A title is used on all pages (SEO: Google calculates the pixel width of the characters used in the title, and it cuts off between 472 and 482 pixels. The average character limit would be around 55-characters).
 
 ```html
 <!-- Document Title -->
@@ -57,7 +57,7 @@ _The next 2 meta tags (Charset and Viewport) need to come first in the head._
 > - 📖 [Title - HTML - MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title)
 > - 🛠 [SERP Snippet Generator](https://www.sistrix.com/serp-snippet-generator/)
 
-- [ ] **Description:** :red_circle: A meta description is provided, it is unique and doesn't possess more than 150 characters.
+- [x] **Description:** :red_circle: A meta description is provided, it is unique and doesn't possess more than 150 characters.
 
 ```html
 <!-- Meta Description -->
@@ -81,7 +81,7 @@ _The next 2 meta tags (Charset and Viewport) need to come first in the head._
 > - 📖 [Favicons, Touch Icons, Tile Icons, etc. Which Do You Need? - CSS Tricks](https://css-tricks.com/favicon-quiz/)
 > - 📖 [PNG favicons - caniuse](https://caniuse.com/#feat=link-icon-png)
 
-- [ ] **Apple Web App Meta:** :large_blue_circle: Apple meta-tags are present.
+- [x] **Apple Web App Meta:** :large_blue_circle: Apple meta-tags are present.
 
 ```html
 <!-- Apple Touch Icon (at least 200x200px) -->
@@ -135,13 +135,13 @@ Minimum required xml markup for the `browserconfig.xml` file is as follows:
 
 ### HTML tags
 
-- [ ] **Language attribute:** :red_circle: The `lang` attribute of your website is specified and related to the language of the current page.
+- [x] **Language attribute:** :red_circle: The `lang` attribute of your website is specified and related to the language of the current page.
 
 ```html
 <html lang="en"></html>
 ```
 
-- [ ] **Direction attribute:** :orange_circle: The direction of lecture is specified on the html tag (It can be used on another HTML tag).
+- [x] **Direction attribute:** :orange_circle: The direction of lecture is specified on the html tag (It can be used on another HTML tag).
 
 ```html
 <html dir="rtl"></html>
@@ -181,7 +181,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 **_Facebook OG_** and **_Twitter Cards_** are, for any website, highly recommended. The other social media tags can be considered if you target a particular presence on those and want to ensure the display.
 
-- [ ] **Facebook Open Graph:** :large_blue_circle: All Facebook Open Graph (OG) are tested and no one is missing or with false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended.
+- [x] **Facebook Open Graph:** :large_blue_circle: All Facebook Open Graph (OG) are tested and no one is missing or with false information. Images need to be at least 600 x 315 pixels, although 1200 x 630 pixels is recommended.
 
 > **Notes:** Using `og:image:width` and `og:image:height` will specify the image dimensions to the crawler so that it can render the image immediately without having to asynchronously download and process it.
 
@@ -202,7 +202,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 📖 [Best Practices - Sharing](https://developers.facebook.com/docs/sharing/best-practices/)
 > - 🛠 Test your page with the [Facebook OG testing](https://developers.facebook.com/tools/debug/)
 
-- [ ] **Twitter Card:** :large_blue_circle:
+- [x] **Twitter Card:** :large_blue_circle:
 
 ```html
 <meta name="twitter:card" content="summary" />

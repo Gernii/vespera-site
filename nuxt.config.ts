@@ -1,8 +1,14 @@
 import tailwindcss from "@tailwindcss/vite";
 import Icons from "unplugin-icons/vite";
+import { DEFAULT_LANGUAGE } from "./shared/lib/utils/hooks/page-seo/constants";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	routeRules: {
+		"/**": {
+			cache: { varies: ["host"] },
+		},
+	},
 	compatibilityDate: "2024-11-01",
 	devtools: { enabled: true },
 
