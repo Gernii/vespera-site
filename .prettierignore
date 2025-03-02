@@ -12,5 +12,3 @@ yarn.lock
 **/*.config.ts
 **/*.d.ts
 **/*.json
-**/*.ts
-**/*.vue

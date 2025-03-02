@@ -19,9 +19,10 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [
 			Icons({
-				compiler: "svelte",
+				compiler: "vue3",
 				defaultClass: "size-4 flex-shrink-0",
 			}),
+
 			tailwindcss(),
 		],
 	},
@@ -32,7 +33,7 @@ export default defineNuxtConfig({
 	},
 
 	plugins: [],
-	modules: ["@nuxt/eslint"],
+	modules: ["@nuxt/eslint", "unplugin-icons/nuxt"],
 	dir: {
 		pages: "routes",
 	},

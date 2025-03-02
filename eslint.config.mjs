@@ -5,7 +5,7 @@ import unusedImports from 'eslint-plugin-unused-imports'
 export default withNuxt(
 	// Your custom configs here
 	{
-		ignores: ['**/*.ts', "**/.nuxt/**", "**/*.config.ts", "**/*.d.ts", "*/*.json"]
+		ignores: ['**/*.ts', '**/.nuxt/**', '**/*.config.ts', '**/*.d.ts', '*/*.json']
 	},
 	{
 		plugins: {
@@ -24,7 +24,8 @@ export default withNuxt(
 				}
 			],
 			'@typescript-eslint/no-unused-vars': 'off',
-			'vue/multi-word-component-names': 'off'
+			'vue/multi-word-component-names': 'off',
+			'vue/html-self-closing': 'off'
 		}
 	}
 )
