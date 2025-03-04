@@ -1,5 +1,6 @@
 import type { VariantProps } from "cva";
 import type { AnchorHTMLAttributes } from "vue";
+import type { RouteLocationRaw } from "vue-router";
 import type { ButtonCommonProps } from "../button";
 import type { buttonClassNameHandler } from "./styles";
 /**
@@ -7,7 +8,10 @@ import type { buttonClassNameHandler } from "./styles";
  */
 export interface ButtonAnchorProps
 	extends ButtonCommonProps,
-		Omit<AnchorHTMLAttributes, "color" | "title"> {}
+		/* @vue-ignore */ Omit<AnchorHTMLAttributes, "color" | "title" | "href"> {
+	to?: RouteLocationRaw;
+	href?: string;
+}
 
 /**
  * Properties for button class names, derived from the button class name handler.

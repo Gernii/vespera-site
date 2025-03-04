@@ -1,6 +1,6 @@
 import { cva } from "cva";
 
-export const buttonClassNameHandler = cva("btn", {
+export const buttonClassNameHandler = cva("btn btn-sm", {
 	variants: {
 		color: {
 			primary: "btn-primary",

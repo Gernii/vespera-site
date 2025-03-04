@@ -63,7 +63,7 @@ const placeholder = computed(() => {
 </script>
 
 <template>
-	<fieldset class="fieldset w-full">
+	<fieldset class="w-full" :class="{ fieldset: props.label }">
 		<legend v-if="props.label" class="fieldset-legend">
 			<span class="capitalize-first inline-block font-semibold">{{ props.label }}</span>
 			<span v-if="props.required" class="text-error">*</span>
