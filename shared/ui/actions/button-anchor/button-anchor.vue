@@ -8,11 +8,20 @@ const props = defineProps<ButtonAnchorProps>()
 
 const slots = useSlots()
 
+const attrs = useAttrs()
+
+/**
+ * Computes the CSS classes for the button based on the props.
+ * If the button is unstyled, it returns only the custom class.
+ * Otherwise, it combines the button's style classes with any custom class.
+ */
 const buttonClasses = computed(() => {
 	if (props.unstyled) {
+		// Return only the custom class if the button is unstyled
 		return cn(props.class)
 	}
 
+	// Generate button classes based on the props
 	const buttonClasses = buttonClassNameHandler({
 		color: props.color,
 		variant: props.variant,
@@ -20,16 +29,50 @@ const buttonClasses = computed(() => {
 		disabled: props.disabled || props.loading
 	})
 
+	// Combine generated classes with any custom class
 	return cn(buttonClasses, props.class)
 })
 </script>
 
 <template>
-	<a :class="buttonClasses" :title="props.title" :aria-label="props.title">
+	<!-- Render an anchor tag if 'href' prop is provided -->
+	<a
+		v-if="props.href"
+		:class="buttonClasses"
+		:title="props.title"
+		:aria-label="props.title"
+		:href="props.href"
+		v-bind="attrs"
+	>
+		<!-- Show loading spinner if 'loading' prop is true -->
 		<span v-if="props.loading" class="loading loading-spinner loading-xs" />
+		<!-- Show icon if 'icon' prop is provided -->
 		<component :is="props.icon" v-else />
+		<!-- Show default slot content if provided -->
 		<span v-if="slots.default"><slot /></span>
+		<!-- Show alternative icon if provided -->
 		<component :is="props.altIcon" />
+		<!-- Show suffix slot content if provided -->
 		<slot name="suffix" />
 	</a>
+	<!-- Render a RouterLink if 'href' prop is not provided -->
+	<RouterLink
+		v-else
+		:to="props.to"
+		:class="buttonClasses"
+		:title="props.title"
+		:aria-label="props.title"
+		v-bind="attrs"
+	>
+		<!-- Show loading spinner if 'loading' prop is true -->
+		<span v-if="props.loading" class="loading loading-spinner loading-xs" />
+		<!-- Show icon if 'icon' prop is provided -->
+		<component :is="props.icon" v-else />
+		<!-- Show default slot content if provided -->
+		<span v-if="slots.default"><slot /></span>
+		<!-- Show alternative icon if provided -->
+		<component :is="props.altIcon" />
+		<!-- Show suffix slot content if provided -->
+		<slot name="suffix" />
+	</RouterLink>
 </template>

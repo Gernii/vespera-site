@@ -23,11 +23,7 @@
   }
 }
 
-@media (min-width: 1280px) {
-    html:has(.xl\:drawer-open.xl\:drawer-open) {
-      overflow-y: unset !important;
-  }
-}
+
 
 
 @layer utilities {
