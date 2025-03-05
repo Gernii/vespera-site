@@ -20,6 +20,12 @@ usePageSeo({
 	description: 'Interactive Vespera playground.', // Sets the page description for SEO.
 	ldJsons: [ldJson()] // Includes structured data in JSON-LD format for SEO.
 })
+
+watch(playgroundName, (value) => {
+	usePageSeo({
+		title: `${value} - Playground`
+	})
+})
 </script>
 
 <template>

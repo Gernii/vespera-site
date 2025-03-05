@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 	},
 
 	plugins: [],
-	modules: ["@nuxt/eslint", "unplugin-icons/nuxt"],
+	modules: ["@nuxt/eslint", "unplugin-icons/nuxt", '@vueuse/nuxt'],
 	dir: {
 		pages: "routes",
 	},
