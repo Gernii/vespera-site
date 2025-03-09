@@ -17,7 +17,7 @@ export interface UsePageSeoProps {
 	/** The title of the page. */
 	title: string;
 	/** A brief description of the page. */
-	description: string;
+	description?: string;
 	/** URL of the image to be used in SEO metadata. */
 	image?: string;
 	/** Type of Twitter card to be used. */
