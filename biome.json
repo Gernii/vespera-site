@@ -13,7 +13,8 @@
 			"all": true,
 			"correctness": {
 				"useImportExtensions": "off",
-				"noUndeclaredVariables": "off"
+				"noUndeclaredVariables": "off",
+				"useHookAtTopLevel": "off"
 			},
 			"style": {
 				"noNamespaceImport": "off"

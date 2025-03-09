@@ -1,31 +1,22 @@
 <script setup lang="ts">
 import { SplitterGroup, SplitterPanel, SplitterResizeHandle } from 'reka-ui'
-import { Button } from '~/shared/ui/actions/button'
-import { Input } from '~/shared/ui/data-input/input'
-import LucideMenu from '~icons/lucide/menu'
-import { OutputType } from '../configs/constants'
 import Editor from './editor.vue'
-import OutputResult from './output-result.vue'
-import OutputAst from './output-ast.vue'
-import OutputTablist from './output-tablist.vue'
-import { usePageSeo } from '~/shared/lib/utils/hooks/page-seo/page-seo'
-import { ldJson } from '../configs/ld-json'
+import { usePlaygroundStore } from '../models/playground'
+import Actions from './actions.vue'
+import { Output } from './output'
 
-const playgroundName = ref<string>('Hello world')
-
-const activeOutput = ref(OutputType.Result)
-
-usePageSeo({
-	title: `${playgroundName.value} - Playground`, // Sets the page title for SEO, combining the playground name and 'Playground'.
-	description: 'Interactive Vespera playground.', // Sets the page description for SEO.
-	ldJsons: [ldJson()] // Includes structured data in JSON-LD format for SEO.
-})
-
-watch(playgroundName, (value) => {
-	usePageSeo({
-		title: `${value} - Playground`
-	})
-})
+/**
+ * Main playground component that provides a split-view interface for code editing and output display
+ * Uses the playground store to manage examples and content state
+ */
+const {
+	examples, // Collection of available code examples
+	selectedExample, // Currently selected example object
+	selectedExampleName, // Name of the currently selected example
+	onChangeExample, // Handler for example selection changes
+	onChangeContent, // Handler for content changes in the editor
+	onCreateNewExample // Handler for creating new examples
+} = usePlaygroundStore()
 </script>
 
 <template>
@@ -33,32 +24,26 @@ watch(playgroundName, (value) => {
 		class="capitalize-first flex min-h-0 flex-col pt-4 supports-[height:100dvh]:h-[calc(100dvh-var(--spacing-nav-height))]"
 	>
 		<div class="bg-base-100 flex min-h-0 grow flex-col space-y-4 pt-4">
-			<div class="flex gap-x-2 px-4">
-				<Button title="Example" icon-only :icon="LucideMenu" />
-				<Input
-					v-model="playgroundName"
-					placeholder="Please submit playground name"
-					type="text"
-					class="w-full"
-				/>
-			</div>
+			<Actions
+				v-model:selected-example-name="selectedExampleName"
+				:examples="examples"
+				@change-example="onChangeExample"
+				@create-new-example="onCreateNewExample"
+			/>
 			<div class="border-base-content/20 h-full min-h-0 border-t">
 				<SplitterGroup direction="horizontal">
 					<SplitterPanel>
-						<Editor />
+						<Editor
+							v-if="selectedExample"
+							:doc="examples[selectedExample].value"
+							@change="onChangeContent"
+						/>
 					</SplitterPanel>
 
 					<SplitterResizeHandle class="bg-base-content/20 w-0.5" />
 
 					<SplitterPanel>
-						<OutputTablist v-model:active-output="activeOutput" />
-
-						<div :class="{ hidden: activeOutput !== OutputType.Result }">
-							<OutputResult />
-						</div>
-						<div :class="{ hidden: activeOutput !== OutputType.Ast }">
-							<OutputAst />
-						</div>
+						<Output />
 					</SplitterPanel>
 				</SplitterGroup>
 			</div>
