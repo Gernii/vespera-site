@@ -12,6 +12,8 @@ export const usePlaygroundStore = () => {
 		{}, // Initial empty state
 	);
 
+	const isMobileScreenOuput = ref<boolean>(false);
+
 	// Track the currently selected example ID
 	const selectedExample = ref<string>();
 
@@ -110,6 +112,7 @@ export const usePlaygroundStore = () => {
 		// State properties
 		examples,
 		selectedExample,
+		isMobileScreenOuput,
 
 		// Reactive
 		selectedExampleName,
