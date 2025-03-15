@@ -1,6 +1,6 @@
 import { cva } from "cva";
 
-export const buttonClassNameHandler = cva("btn btn-sm", {
+export const buttonAnchorClassNameHandler = cva("btn btn-sm", {
 	variants: {
 		color: {
 			primary: "btn-primary",
@@ -15,10 +15,10 @@ export const buttonClassNameHandler = cva("btn btn-sm", {
 			outline: "btn-outline",
 			text: "btn-outline border-0",
 		},
-		icon: { true: "btn-square", false: "" },
+		icon: { true: "btn-square", false: null },
 		disabled: {
 			true: "btn-disabled pointer-events-none cursor-crosshair",
-			false: "",
+			false: null,
 		},
 	},
 });

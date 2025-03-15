@@ -15,10 +15,10 @@ export const buttonClassNameHandler = cva("btn btn-sm", {
 			outline: "btn-outline",
 			text: "btn-outline border-0",
 		},
-		icon: { true: "btn-square", false: "" },
+		icon: { true: "btn-square", false: null },
 		disabled: {
 			true: "btn-disabled pointer-events-none cursor-crosshair",
-			false: "",
+			false: null,
 		},
 	},
 });

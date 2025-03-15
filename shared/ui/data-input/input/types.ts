@@ -1,11 +1,12 @@
 import type { VariantProps } from "cva";
 import type { ClassValue } from "cva/types";
+import type { InputHTMLAttributes } from "vue";
 import type { inputClassNameHandler } from "./styles";
 
 /**
  * Interface representing the properties for an input component.
  */
-export interface InputProps {
+export interface InputProps extends /* @vue-ignore */ InputHTMLAttributes {
 	/** The size of the input, determined by `InputClassNameProps["size"]`. */
 	size?: InputClassNameProps["size"];
 

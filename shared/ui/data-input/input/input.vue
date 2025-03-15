@@ -75,6 +75,7 @@ const placeholder = computed(() => {
 			:disabled="props.disabled"
 			:type="props.type"
 			:placeholder="placeholder"
+			:aria-label="props.label"
 		/>
 		<div v-if="(props.error && !props.hideError) || props.notice" class="label">
 			<span v-if="props.error && !props.hideError" class="label-text-alt text-error">

@@ -2,7 +2,7 @@ import type { VariantProps } from "cva";
 import type { AnchorHTMLAttributes } from "vue";
 import type { RouteLocationRaw } from "vue-router";
 import type { ButtonCommonProps } from "../button";
-import type { buttonClassNameHandler } from "./styles";
+import type { buttonAnchorClassNameHandler } from "./styles";
 /**
  * Properties for an anchor button element.
  */
@@ -16,4 +16,6 @@ export interface ButtonAnchorProps
 /**
  * Properties for button class names, derived from the button class name handler.
  */
-export type ButtonClassNameProps = VariantProps<typeof buttonClassNameHandler>;
+export type ButtonAnchorClassNameProps = VariantProps<
+	typeof buttonAnchorClassNameHandler
+>;

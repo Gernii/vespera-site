@@ -1,12 +1,12 @@
 import { cva } from "cva";
 
-export const containerClassNameHandler = cva("", {
+export const containerClassNameHandler = cva(null, {
 	variants: {
 		padding: {
 			bottom: "pb-2",
-			top: " pt-2",
+			top: "pt-2",
 			"top-bottom": "py-2",
-			none: "",
+			none: null,
 		},
 	},
 	defaultVariants: {
@@ -30,11 +30,11 @@ export const containerInnerClassNameHandler = cva("mx-auto", {
 			11: "max-w-7xl",
 			12: "max-w-(--breakpoint-xl)",
 			13: "max-w-(--breakpoint-2xl)",
-			0: "",
+			0: null,
 		},
 		padding: {
 			true: "px-2",
-			false: "",
+			false: null,
 		},
 	},
 	defaultVariants: {
