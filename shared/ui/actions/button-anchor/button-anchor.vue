@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, useSlots } from 'vue'
 import type { ButtonAnchorProps } from './types'
-import { buttonClassNameHandler } from './styles'
+import { buttonAnchorClassNameHandler } from './styles'
 import { cn } from '~/shared/lib/utils/classname'
 
 const props = defineProps<ButtonAnchorProps>()
@@ -22,7 +22,7 @@ const buttonClasses = computed(() => {
 	}
 
 	// Generate button classes based on the props
-	const buttonClasses = buttonClassNameHandler({
+	const buttonClasses = buttonAnchorClassNameHandler({
 		color: props.color,
 		variant: props.variant,
 		icon: props.iconOnly,

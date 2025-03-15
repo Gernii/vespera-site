@@ -1,12 +1,12 @@
 import { cva } from "cva";
 
-export const inputClassNameHandler = cva("", {
+export const inputClassNameHandler = cva(null, {
 	variants: {
 		size: {
 			sm: "input-sm",
 			md: "input-md",
 			lg: "input-lg",
-			none: "",
+			none: null,
 		},
 		bordered: {
 			true: "input-bordered",
