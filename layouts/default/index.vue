@@ -16,13 +16,15 @@ import LucideMenu from '~icons/lucide/menu'
 				<ContainerInner class="flex h-full items-center justify-between gap-x-4">
 					<div class="flex items-center gap-x-4">
 						<!-- Button to open the drawer menu on small screens -->
+						<!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
 						<label for="drawer" class="btn-square btn-sm btn lg:hidden">
 							<LucideMenu />
 						</label>
 						<!-- Link to the home page -->
 						<RouterLink :to="{ name: 'index' }" class="text-2xl font-bold"> Vespera </RouterLink>
-						<nav class="hidden lg:block">
+						<nav class="hidden gap-x-2 lg:flex">
 							<NavItem :to="{ name: 'playground' }" title="Playground" />
+							<NavItem :to="{ name: 'blog' }" title="Blog" />
 						</nav>
 					</div>
 					<div class="flex items-center gap-x-4">
@@ -40,6 +42,7 @@ import LucideMenu from '~icons/lucide/menu'
 			style="scroll-behavior: smooth; scroll-padding-top: 5rem"
 		>
 			<!-- Overlay to close the drawer menu -->
+			<!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
 			<label for="drawer" class="drawer-overlay" aria-label="Close menu" />
 			<aside class="bg-base-100 min-h-dvh w-80">
 				<!-- Sticky header inside the drawer menu -->
@@ -49,9 +52,8 @@ import LucideMenu from '~icons/lucide/menu'
 				<div class="h4"></div>
 				<!-- Navigation inside the drawer menu -->
 				<nav class="px-6 *:py-4">
-					<div>
-						<NavItem :to="{ name: 'index' }" title="Playground" />
-					</div>
+					<NavItem :to="{ name: 'playground' }" title="Playground" />
+					<NavItem :to="{ name: 'blog' }" title="Blog" />
 				</nav>
 			</aside>
 		</div>

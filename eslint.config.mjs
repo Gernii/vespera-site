@@ -1,9 +1,11 @@
 // @ts-check
 import withNuxt from './.nuxt/eslint.config.mjs'
 import unusedImports from 'eslint-plugin-unused-imports'
+import pluginVueA11y from 'eslint-plugin-vuejs-accessibility'
 
 export default withNuxt(
 	// Your custom configs here
+	...pluginVueA11y.configs['flat/recommended'],
 	{
 		ignores: ['**/*.ts', '**/.nuxt/**', '**/*.config.ts', '**/*.d.ts', '*/*.json']
 	},
@@ -25,7 +27,8 @@ export default withNuxt(
 			],
 			'@typescript-eslint/no-unused-vars': 'off',
 			'vue/multi-word-component-names': 'off',
-			'vue/html-self-closing': 'off'
+			'vue/html-self-closing': 'off',
+			'vuejs-accessibility/form-control-has-label': 'off'
 		}
 	}
 )

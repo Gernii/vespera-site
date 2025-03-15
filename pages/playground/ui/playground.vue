@@ -31,6 +31,7 @@ const {
 				@change-example="onChangeExample"
 				@create-new-example="onCreateNewExample"
 			/>
+			<!-- eslint-disable-next-line vuejs-accessibility/label-has-for -->
 			<label class="flex flex-row items-center justify-center gap-x-2 md:hidden">
 				<span>Input</span>
 				<input v-model="isMobileScreenOuput" type="checkbox" class="toggle toggle-sm" />
@@ -42,7 +43,7 @@ const {
 					:doc="examples[selectedExample].value"
 					@change="onChangeContent"
 				/>
-				<Output v-if="isMobileScreenOuput" />
+				<Output v-if="isMobileScreenOuput" />s
 			</div>
 			<div class="border-base-content/20 hidden h-full min-h-0 border-t md:block">
 				<SplitterGroup direction="horizontal">
