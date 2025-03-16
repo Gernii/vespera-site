@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { Link } from '~/shared/ui/navigation/link'
-import type { BlogContentDetails } from '../configs/types'
+import type { BlogPostDetail } from '../configs/types'
 
-const props = defineProps<BlogContentDetails>()
+const props = defineProps<BlogPostDetail>()
 </script>
 
 <template>
@@ -21,5 +21,4 @@ const props = defineProps<BlogContentDetails>()
 	<p class="text-base-content/50 text-xs" :title="`Published ${props.lastUpdateRaw}`">
 		Published {{ props.lastUpdate }}
 	</p>
-	<p></p>
 </template>

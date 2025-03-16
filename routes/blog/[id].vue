@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import { BlogDetailPage } from '~/pages/blog-detail'
+</script>
+
 <template>
-	<div></div>
+	<BlogDetailPage />
 </template>

@@ -2,6 +2,7 @@
     "scopes": [
         "playground",
         "docs",
-        "blog"
+        "blog",
+        "blog-detail"
     ]
 }
