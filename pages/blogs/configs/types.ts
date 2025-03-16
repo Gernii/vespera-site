@@ -1,7 +1,7 @@
-import type { BlogContent } from "~/shared/blog-contents/types";
+import type { BlogPost } from "~/shared/blog-posts/types";
 
-export interface BlogContentDetails
-	extends Omit<BlogContent, "lastUpdate" | "content"> {
+export interface BlogPostDetail
+	extends Omit<BlogPost, "lastUpdate" | "content"> {
 	id: string;
 	lastUpdate: string;
 	lastUpdateRaw: string;

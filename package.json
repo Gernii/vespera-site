@@ -51,6 +51,7 @@
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/lucide": "^1.2.26",
     "@nuxtjs/mdc": "^0.15.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.0.8",
     "@uiw/codemirror-theme-github": "^4.23.9",
     "@vueuse/core": "^12.8.2",

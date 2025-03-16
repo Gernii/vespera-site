@@ -1,7 +1,7 @@
 /**
  * Interface representing the structure of a blog post content.
  */
-export interface BlogContent {
+export interface BlogPost {
 	/**
 	 * The title of the blog post.
 	 */
