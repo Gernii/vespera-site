@@ -25,6 +25,7 @@ import LucideMenu from '~icons/lucide/menu'
 						<nav class="hidden gap-x-2 lg:flex">
 							<NavItem :to="{ name: 'playground' }" title="Playground" />
 							<NavItem :to="{ name: 'blog' }" title="Blog" />
+							<NavItem :to="{ name: 'doc' }" title="Docs" />
 						</nav>
 					</div>
 					<div class="flex items-center gap-x-4">
@@ -54,6 +55,7 @@ import LucideMenu from '~icons/lucide/menu'
 				<nav class="px-6 *:py-4">
 					<NavItem :to="{ name: 'playground' }" title="Playground" />
 					<NavItem :to="{ name: 'blog' }" title="Blog" />
+					<NavItem :to="{ name: 'doc' }" title="Docs" />
 				</nav>
 			</aside>
 		</div>
