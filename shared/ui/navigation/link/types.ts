@@ -24,15 +24,15 @@ export interface LinkProps
 	/** Underline style of the link
 	 * @default false
 	 * */
-	underline?: LinkClassNameProps["underline"];
+	underline?: boolean;
 	/** Controls underline behavior on hover
 	 * @default false
 	 * */
-	underlineOnHover?: LinkClassNameProps["underlineOnHover"];
+	underlineOnHover?: boolean;
 	/** Controls color change behavior on hover
 	 * @default false
 	 * */
-	colorChangeOnHover?: LinkClassNameProps["colorChangeOnHover"];
+	colorChangeOnHover?: boolean;
 	/** Removes default styling when true */
 	unstyled?: boolean;
 }
