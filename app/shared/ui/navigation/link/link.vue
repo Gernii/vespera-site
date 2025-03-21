@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { cn } from '~/shared/lib/utils/classname'
 import type { LinkProps } from './types'
 import { linkClassNameHandler } from './styles'
+import { cn } from '~/shared/lib/utils/classname'
 
 const props = defineProps<LinkProps>()
 

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { Container, ContainerInner } from '~/shared/ui/layout/container'
 import NavItem from './nav-item.vue'
-import { ButtonAnchor } from '~/shared/ui/actions/button-anchor'
-import { GITHUB_REPO_URL } from '~/shared/configs/constants'
 import LucideGithub from '~icons/lucide/github'
 import LucideMenu from '~icons/lucide/menu'
+import { Container, ContainerInner } from '~/shared/ui/layout/container'
+import { GITHUB_REPO_URL } from '~/shared/configs/constants'
+import { ButtonAnchor } from '~/shared/ui/actions/button-anchor'
 </script>
 
 <template>

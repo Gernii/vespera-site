@@ -14,7 +14,7 @@ const route = useRoute('blog-id')
  */
 const { data } = await useAsyncData(route.path, async (): Promise<BlogPostDetail> => {
 	// Get the blog post content using the ID from route params
-	const selectedPost = blogPosts[route.params.id]
+	const selectedPost = blogPosts[route.params.id as string]
 
 	return {
 		// Parse the markdown content into MDC format
