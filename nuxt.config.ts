@@ -3,6 +3,10 @@ import Icons from "unplugin-icons/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	future: {
+		compatibilityVersion: 4,
+	},
+
 	routeRules: {
 		"/**": {
 			cache: { varies: ["host"] },
@@ -10,7 +14,9 @@ export default defineNuxtConfig({
 	},
 	compatibilityDate: "2024-11-01",
 	devtools: { enabled: true },
-
+	imports: {
+		scan: false,
+	},
 	experimental: {
 		typedPages: true,
 	},
@@ -18,8 +24,6 @@ export default defineNuxtConfig({
 	typescript: {
 		strict: false,
 	},
-
-	css: ["~/assets/css/main.css"],
 
 	vite: {
 		plugins: [
@@ -44,7 +48,8 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@nuxtjs/mdc",
 	],
+
 	dir: {
-		pages: "routes",
+		pages: "app/routes",
 	},
 });
