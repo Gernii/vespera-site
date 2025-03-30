@@ -42,7 +42,7 @@ const linkClasses = computed(() => {
 	>
 		<slot />
 	</a>
-	<RouterLink
+	<NuxtLink
 		v-else
 		:to="props.to"
 		:title="props.title"
@@ -51,5 +51,5 @@ const linkClasses = computed(() => {
 		v-bind="attrs"
 	>
 		<slot />
-	</RouterLink>
+	</NuxtLink>
 </template>
