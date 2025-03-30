@@ -55,8 +55,8 @@ const buttonClasses = computed(() => {
 		<!-- Show suffix slot content if provided -->
 		<slot name="suffix" />
 	</a>
-	<!-- Render a RouterLink if 'href' prop is not provided -->
-	<RouterLink
+	<!-- Render a NuxtLink if 'href' prop is not provided -->
+	<NuxtLink
 		v-else
 		:to="props.to"
 		:class="buttonClasses"
@@ -74,5 +74,5 @@ const buttonClasses = computed(() => {
 		<component :is="props.altIcon" />
 		<!-- Show suffix slot content if provided -->
 		<slot name="suffix" />
-	</RouterLink>
+	</NuxtLink>
 </template>

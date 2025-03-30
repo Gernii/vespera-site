@@ -7,6 +7,8 @@ export default defineNuxtConfig({
 		compatibilityVersion: 4,
 	},
 
+	css: ["~/assets/css/main.css"],
+
 	routeRules: {
 		"/**": {
 			cache: { varies: ["host"] },
@@ -48,8 +50,13 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@nuxtjs/mdc",
 	],
-
 	dir: {
-		pages: "app/routes",
+		pages: "routes",
+	},
+
+	nitro: {
+		prerender: {
+			autoSubfolderIndex: false,
+		},
 	},
 });

@@ -12,7 +12,7 @@ const props = defineProps<{
 </script>
 
 <template>
-	<RouterLink :to="props.to" class="link hover:text-primary no-underline">
+	<NuxtLink :to="props.to" class="link hover:text-primary no-underline">
 		{{ props.title }}
-	</RouterLink>
+	</NuxtLink>
 </template>

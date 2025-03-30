@@ -21,7 +21,7 @@ import { ButtonAnchor } from '~/shared/ui/actions/button-anchor'
 							<LucideMenu />
 						</label>
 						<!-- Link to the home page -->
-						<RouterLink :to="{ name: 'index' }" class="text-2xl font-bold"> Vespera </RouterLink>
+						<NuxtLink :to="{ name: 'index' }" class="text-2xl font-bold"> Vespera </NuxtLink>
 						<nav class="hidden gap-x-2 lg:flex">
 							<NavItem :to="{ name: 'playground' }" title="Playground" />
 							<NavItem :to="{ name: 'blog' }" title="Blog" />
@@ -48,7 +48,7 @@ import { ButtonAnchor } from '~/shared/ui/actions/button-anchor'
 			<aside class="bg-base-100 min-h-dvh w-80">
 				<!-- Sticky header inside the drawer menu -->
 				<div class="h-nav-height bg-base-100 sticky top-0 flex w-full items-center px-6">
-					<RouterLink :to="{ name: 'index' }" class="text-2xl font-bold"> Vespera</RouterLink>
+					<NuxtLink :to="{ name: 'index' }" class="text-2xl font-bold"> Vespera</NuxtLink>
 				</div>
 				<div class="h4"></div>
 				<!-- Navigation inside the drawer menu -->
